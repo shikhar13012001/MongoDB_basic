@@ -1,8 +1,6 @@
 const assert = require('assert');
 const mongoose = require('mongoose');
 const Author = require('../models/authors');
-
-// Describe our tests
 describe('Nesting records', function(){
 
     beforeEach(function(done){

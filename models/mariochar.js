@@ -6,7 +6,9 @@ const Schema = mongoose.Schema;
 const MarioCharSchema = new Schema({
     name: String,
     weight: Number
-});
+}, {
+    usePushEach: true
+  });
 
 const MarioChar = mongoose.model('mariochar', MarioCharSchema);
 

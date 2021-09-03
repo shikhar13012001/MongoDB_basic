@@ -7,7 +7,12 @@ mongoose.Promise = global.Promise;
 before(function(done){
 
     // Connect to mongodb
-    mongoose.connect('mongodb://localhost/testaroo');
+    mongoose.connect('mongodb://localhost/gregopovich',{
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        })   
+    .then(() => console.log("Database connected!"))
+    .catch(err => console.log(err));
     mongoose.connection.once('open', function(){
         console.log('Connection has been made, now make fireworks...');
         done();
